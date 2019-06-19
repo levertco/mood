@@ -19,10 +19,12 @@
       color: white;
 
     }
-.jumbotron{
-  background-color:rgba(0,0,0,0.8);
-  color: white;
-}
+
+    .jumbotron {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+    }
+
     .container-fluid {
       margin: 0 auto;
       width: 960px;
@@ -54,8 +56,37 @@
       .container-fluid {
         width: 70%;
       }
+      .nav-link{
+       background-color: rgba(0,0,0,0.8)!important;
+   }
+
     }
   </style>
+  <br>
+  <br>
+  <div class="navs">
+    <ul class="nav justify-content-end color-text-secondary mr-6">
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="music.html">iMusic</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="movies.html">iMovies</a>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="games.html">iGames</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="books.html">iBooks</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="#contact">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <br>
   <br>
   <div class="container-fluid">
     <div class="jumbotron">
@@ -68,7 +99,7 @@
 
       <div class="whatwedo">
         <h1 class="pacifico" style="text-align: center;">Let's take you away from reality, without drugs!</h1>
-<img src="https://i.pinimg.com/originals/ed/65/1d/ed651d612fd2ca6cd48dd3889a8f4193.png" class="mx-auto d-block" alt="books">
+        <img src="https://i.pinimg.com/originals/ed/65/1d/ed651d612fd2ca6cd48dd3889a8f4193.png" class="mx-auto d-block" alt="books">
         <br>
         <br>
         <br>
@@ -95,14 +126,10 @@
                   <p class="moodParagraph"></p>
                   <ul class="list-group happyChoice">
                     <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgSE1yY1piTF82cnM"> War Cross by Marie Lu</a> </li>
-                    <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgLXhWOG9IdHZ5bm1DcFRFWmNGOEduMlM3cHJR"> I was Born For This By Alice Oseman</a> </li>
-                    <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgVVZINkUwZTBJS0E"> Matilda by Roald Dahl</a> </li>
-                    <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgd3NDTWRQMzlJaVk"> The Sun Is Also A Star by Nicola Yoon</a> </li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgelllUG5CT0lkM1F5ajVQRjktSlBSUnQ5eDJF"> Nice</a> </li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgelllUG5CT0lkM1F5ajVQRjktSlBSUnQ5eDJF"> Nice</a> </li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgLXhWOG9IdHZ5bm1DcFRFWmNGOEduMlM3cHJR"> I was Born For This By Alice Oseman</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgVVZINkUwZTBJS0E"> Matilda by Roald Dahl</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgd3NDTWRQMzlJaVk"> The Sun Is Also A Star by Nicola Yoon</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgelllUG5CT0lkM1F5ajVQRjktSlBSUnQ5eDJF"> Nice</a> </li>
                   </ul>
 
 
@@ -112,19 +139,19 @@
                   </ul>
 
 
-                                    <ul class="list-group sadChoice">
-                                      <li class="list-group-item">sad 1</li>
-                                      <li class="list-group-item">sad 2</li>
-                                    </ul>
+                  <ul class="list-group sadChoice">
+                    <li class="list-group-item">sad 1</li>
+                    <li class="list-group-item">sad 2</li>
+                  </ul>
 
                 </div>
 
               </div>
-    </div>
+            </div>
           </div>
 
 
-<script src="js/jquery-3.4.1.js"> </script>
+          <script src="js/jquery-3.4.1.js"> </script>
           <script src="js/popper.min.js"></script>
           <script src="js/bootstrap.min.js"></script>
           <script>
@@ -132,7 +159,7 @@
             console.log('bruh');
             console.log(69);
             $(document).ready(function() {
-//randomize plugin
+              //randomize plugin
               $.fn.randomize = function(selector) {
                 (selector ? this.find(selector) : this).parent().each(function() {
                   $(this).children(selector).sort(function() {
@@ -143,7 +170,7 @@
               };
 
               $('ul li').hide();
-
+              $(".navs ul li").show();
 
               $('.bookMood').click(function() {
                 if ($(".bookMood option:selected").val() === "happy") {
@@ -152,7 +179,7 @@
 
                 };
 
-               })
+              })
 
 
 
