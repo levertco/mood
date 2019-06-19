@@ -56,8 +56,37 @@
       .container-fluid {
         width: 70%;
       }
+      .nav-link{
+       background-color: rgba(0,0,0,0.8)!important;
+   }
+
     }
   </style>
+  <br>
+  <br>
+  <div class="navs">
+    <ul class="nav justify-content-end color-text-secondary mr-6">
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="music.html">iMusic</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="movies.html">iMovies</a>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="games.html">iGames</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="books.html">iBooks</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="#contact">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <br>
   <br>
   <div class="container-fluid">
     <div class="jumbotron">
@@ -97,14 +126,10 @@
                   <p class="moodParagraph"></p>
                   <ul class="list-group happyChoice">
                     <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgSE1yY1piTF82cnM"> War Cross by Marie Lu</a> </li>
-                    <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgLXhWOG9IdHZ5bm1DcFRFWmNGOEduMlM3cHJR"> I was Born For This By Alice Oseman</a> </li>
-                    <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgVVZINkUwZTBJS0E"> Matilda by Roald Dahl</a> </li>
-                    <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgd3NDTWRQMzlJaVk"> The Sun Is Also A Star by Nicola Yoon</a> </li>
-
-
-
-                    <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgelllUG5CT0lkM1F5ajVQRjktSlBSUnQ5eDJF"> Nice</a> </li>
-
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgLXhWOG9IdHZ5bm1DcFRFWmNGOEduMlM3cHJR"> I was Born For This By Alice Oseman</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgVVZINkUwZTBJS0E"> Matilda by Roald Dahl</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgd3NDTWRQMzlJaVk"> The Sun Is Also A Star by Nicola Yoon</a> </li>
+                  <li class="list-group-item"> <a href="https://drive.google.com/open?id=0ByenimV6OTsgelllUG5CT0lkM1F5ajVQRjktSlBSUnQ5eDJF"> Nice</a> </li>
                   </ul>
 
 
@@ -145,7 +170,7 @@
               };
 
               $('ul li').hide();
-
+              $(".navs ul li").show();
 
               $('.bookMood').click(function() {
                 if ($(".bookMood option:selected").val() === "happy") {
