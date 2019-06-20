@@ -20,7 +20,7 @@ BDD(Behavior Driven Development) focuses on users being able to identify the kin
 
 This requires users to select the mood they would like to feel or the mood they are in and wait for a suggestion from Mood Sync on what best suits their entertainment needs.
 | Input | Purpose| Output |
-\| :---         \|     :---:      \|          ---: \|
+\| :---\|:---:\|---:\|
 | Once on Mood Sync Website | click on the navigation bar on the top left and click the form of entertainment you would prefer     | You will be directed to your webpage of choice    |
 | Once on the webpage you will select the mood you would like to feel   | Mood Sync will make a selection based on your pick     |  You will get a download link so that you can download your podcast, game, movie, book or song|
 
