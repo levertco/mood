@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <title>iGames</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="shorcut icon" href="images/Emoji_emoticon_emoticons_expression_laugh_mood-512.png" type="image/png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
 </head>
+
 <body>
   <div class="container">
     <style media="screen">
       @import url('bootstrap.min.css');
+
       body {
         margin: 0 !important;
         padding: 0 !important;
       background-image: url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=349&q=80")
       ;     }
+
       .col-8 {
         background-color: rgba(0,0,0,0.8);
         width: 100%;
       }
+
       .col-8 img {
         margin-top: 70px;
       }
+
       .col-8 h1 {
         text-align: center;
         color: white;
         font-style: oblique;
       }
+
       .col-8 p {
         text-align: center;
         color: white;
       }
+
       hr {
         border-style: none;
       }
+
       .footer {
         color: white;
       }
+
       .title {
         float: left;
         background-color: #f1f1f1;
         width: 100%;
       }
+
       .title button {
         display: block;
         background-color: inherit;
@@ -55,40 +68,47 @@
         transition: 0.3s;
         font-size: 17px;
       }
+
       .title button:hover {
-        background-color: #ddd;
+        background-color: rgba(0,0,0,0.8);
       }
       .nav-link{
 background-color:rgba(0,0,0,0.8)!important;
       }
     </style>
+
     <br>
+
     <ul class="nav justify-content-end bg-blue color-text-secondary mr-6">
-      <li class="nav-item">
-        <a class="nav-link  bg-info text-white" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link  bg-info text-white" href="music.html">iMusic</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link  bg-info text-white" href="icast.html">iCasts</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link  bg-info text-white" href="movies.html">iMovies</a>
 
       <li class="nav-item">
-        <a class="nav-link  bg-info text-white" href="books.html">iBooks</a>
+        <a class="nav-link  bg-info text-white" href="#aboutUs" target="_blank">About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link  bg-info text-white" href="#contact">Contact Us</a>
+        <a class="nav-link  bg-info text-white" href="music.html" target="_blank">Music</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="icast.html" target="_blank">Icasts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="movies.html" target="_blank"> Movies</a>
+
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="books.html" target="_blank">Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  bg-info text-white" href="#contact" target="_blank">Contact Us</a>
       </li>
     </ul>
+
     <!-- lets screw things up -->
     <br><br>
+
     <div class="row">
         <div class="col-4">
           <div class="title">
-            <button class="links" onclick="openCast(event, 'home')">Home</button>
+            <h4>Mood: select genre</h4>
+            <button class="links" onclick="openGame(event, 'home')" id="defaultOpen">Home</button><hr>
             <hr>
             <button class="links" onclick="openGame(event, 'action')">Action games</button>
             <hr>
@@ -110,49 +130,99 @@ background-color:rgba(0,0,0,0.8)!important;
             <hr>
           </div>
       </div>
+
       <div class="col-8">
         <div class="content" id="home">
-          <img src="images/game1.jpg" class="mx-auto d-block" alt="Cinque Terre" width="330" height="240">
-          <h1>PlayerLair</h1>
+          <img src="images/game1.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"><br>
+          <h1>PlayerLair</h1><br>
           <p>This section brings you links to play or download video games and reviews of the most exciting releases. We cover everything from PlayStation and Xbox blockbusters, to quirky Nintendo games, to the cool indie gems on PC and Android that
-            you might otherwise miss. We have genres listed down for you, to help you choose a game that your mood needs</p>
+            you might otherwise miss. We have genres listed down for you, to help you choose a game that your mood needs</p><br>
           <footer class="page-footer font-small cyan darken-3">
             <div class="footer" style="text-align:center">
               <div class="footer-copyright text-center py-3">© 2019 Copyright: Mood-sync</div>
               <div class="footer-copyright text-center py-3">Follow us on:</div>
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-square-o fa-stack-2x"></i>
-                <i class="fa fa-twitter fa-stack-1x"></i>
-              </span>
-              <span class="fa-stack fa-lg"> <i class="fa fa-instagram fa-stack-2x" aria-hidden="true"></i></span>
-              <span class="fa-stack fa-lg"> <i class="fa fa-github fa-stack-2x" aria-hidden="true"></i></span>
+
+               <i class="fab fa-twitter"></i>
+              <span class="fa-stack fa-lg"> <i class="fab fa-instagram"></i></span>
+              <span class="fa-stack fa-lg"> <i class="fab fa-github"></i></span>
+              <span class="fa-stack fa-lg"> <i class="fab fa-linkedin-in"></i></i></span>
             </div>
           </footer>
         </div>
         <div class="content" id="action">
+          <a href="https://www.gamebra.com/gta-5-online.html"><img src="images/gta.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
+          <br>
+          <p> If you want a game that puts emphasis on challenging the player’s: in this case,you; reflexes, reaction time, and hand-eye coordination, then you're on the right page. </p>
         </div>
         <div class="content" id="sport">
+          <a href="https://nba.2k.com/playgrounds/"><img src="images/nba.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
+          <br>
+          <p>Just like the real-world sports, sports games simulate the traditional physical sports wherein the opposing team is controlled by artificial intelligence (AI) or other real-life people. If you want to play actual sports without going outside, this is you.</p>
         </div>
         <div class="content" id="brg">
+          <a href="https://lite.pubg.com/download/"><img src="images/pubg.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
+          <br>
+          <p>Part of the fun of a battle royale is that there are multiple ways to win. Not confident in your close combat skills? Find a sniper and pick people off from a distance. Prefer to avoid conflict? Go the stealth route and see how far you can get without engaging in any fights.</p>
         </div>
         <div class="content" id="rpg">
+          <img src="images/witcher.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300">
+          <br>
+          <p> It’s a genre of video and online games where the player controls a fictional character that takes on a quest in an imaginary world. Play RPGs if you want to exist virtually and do stuff you couldn't in real life!</p>
         </div>
         <div class="content" id="adventure">
+          <a href="http://www.free80sarcade.com/mspacman.php"><img src="images/dungeon.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
+          <br>
+          <p>This is for adrenaline junkies and curious minds. In video-game culture, these games are a video games in which the player assumes the role of a protagonist in an interactive story driven by exploration and puzzle-solving.</p>
+        </div>
+        <div class="content" id="racing">
+          <a href="https://www.agame.com/games/racing"><img src="images/mario.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
+
         </div>
         <div class="content" id="fighting">
+          <a href="http://www.plonga.com/action/Street-Fighting/Mortal-Kombat"><img src="images/mk.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
+
         </div>
-        <div class="content" id="trs">
+        <div class="content" id="rts">
+          <a href="https://play.euw.leagueoflegends.com/en_GB"><img src="images/lol.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
+
         </div>
         <div class="content" id="simulator">
+          <a href="https://emulatoronline.com/snes-games/simcity-classic/"><img src="images/simcity.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
+          <br>
+          <p>Welcome to the simulated world! A good example is SimCity, This game simulates the lives of characters along with the construction and management of the city. You're even given an option to manage an economic system</p>
         </div>
+
       </div>
+
     </div>
     <br>
+
   </div>
+
   <!-- oooh, we did great, I think -->
+
+  <script>
+function openGame(evt, gameName) {
+  var i, content, links;
+  content = document.getElementsByClassName("content");
+  for (i = 0; i < content.length; i++) {
+    content[i].style.display = "none";
+  }
+  links = document.getElementsByClassName("links");
+  for (i = 0; i < links.length; i++) {
+    links[i].className = links[i].className.replace(" active", "");
+  }
+  document.getElementById(gameName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
+
 </html>
