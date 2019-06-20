@@ -1,725 +1,533 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="shorcut icon" href="images/Emoji_emoticon_emoticons_expression_laugh_mood-512.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shorcut icon" href="images/Emoji_emoticon_emoticons_expression_laugh_mood-512.png" type="image/png">
   <title>iMusic</title>
-<style>
-.navbar {
-  overflow: hidden;
-  background-color: rgba(80, 0, 190, 0.31);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <style>
+    .navbar {
+      overflow: hidden;
+      background-color: rgba(80, 0, 190, 0.31);
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: #ce00ff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: #ce00ff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
 
-.dropdown .dropbtn {
-  cursor: pointer;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-  background-color: #580080;
-}
+    .navbar a:hover,
+    .dropdown:hover .dropbtn,
+    .dropbtn:focus {
+      background-color: #580080;
+    }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #650083;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #650083;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
 
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
 
-.show {
-  display: block;
-}
- canvas {
-    width: 100vw;
-    height: 100vh;
-}
+    .show {
+      display: block;
+    }
 
-body {
-    margin: 0;
-    overflow: hidden;
-}
-  
-  
-  /* Music player L Co CC 2019 */
-@charset "UTF-8";
+    canvas {
+      width: 100vw;
+      height: 100vh;
+    }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, audio, canvas, details, figcaption, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, summary, time, video {
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  line-height: 1;
-}
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
 
 
+    /* Music player L Co CC 2019 */
+    @charset "UTF-8";
 
-@font-face {
-  font-family: GeoSans;
-  src: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/164143/GeosansLight.ttf);
-}
-/*cascade starts*/
-body {
-  font-family: GeoSans;
-  /*font-size: 62.5%;*/
-  background-color: #FFFFFF;
-  background-size: cover;
-  -webkit-animation: hue 0s infinite linear;
-  background-blend-mode: screen;
-}
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    font,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    audio,
+    canvas,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    mark,
+    menu,
+    meter,
+    nav,
+    output, progress,   section,
+summary,time, video {
+      border: 0;
+      outline: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+      background: transparent;
+      margin: 0;
+      padding: 0;
+    }
 
-@-webkit-keyframes hue {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: hue-rotate(-360deg);
-  }
-}
-@-webkit-keyframes goTopZero {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(700px);
-  }
-}
-h1 {
-  font-size: 32px;
-}
+    body {
+      line-height: 1;
+    }
 
-li {
-  list-style: none;
-}
 
-svg {
-  width: 40px;
-  height: 40px;
-}
 
-.load-mask {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(70, 70, 70, 0.4);
-  text-align: center;
-  z-index: 1000;
-  top: 0;
-}
-.load-mask:after {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  top: calc(50% - 25px);
-  left: calc(50% - 25px);
-  border-bottom: 5px solid rgba(0, 0, 0, 0.1);
-  border-left: 5px solid rgba(0, 0, 0, 0.1);
-  border-right: 5px solid rgba(0, 0, 0, 0.1);
-  border-top: 5px solid rgba(0, 0, 0, 0.4);
-  border-radius: 100%;
-  -webkit-animation: rot .6s infinite linear;
-  animation: rot .6s infinite linear;
-}
+    @font-face {
+      font-family: GeoSans;
+      src: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/164143/GeosansLight.ttf);
+    }
 
-@-webkit-keyframes rot {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-@keyframes rot {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-.alert {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background: rgba(70, 70, 70, 0.4);
-  z-index: 1000;
-  color: #FFFFFF;
-  line-height: 100vh;
-  text-align: center;
-}
+ 
 
-.visible {
-  -webkit-transition: top 500ms;
-  top: 0px;
-}
-
-.hidden {
-  -webkit-transition: top 500ms;
-  top: -700px;
-}
-
-/*
-header
-*/
-header {
-  width: 100%;
-  height: 100px;
-  background-color: rgba(150, 150, 150, 0.6);
-}
-header > h1 {
-  padding-top: 34px;
-  margin-left: 100px;
-  display: inline-block;
-  float: left;
-}
-header > ul {
-  width: 400px;
-  float: right;
-  padding-top: 34px;
-}
-header > ul li {
-  display: block;
-  width: 160px;
-  height: 50px;
-  float: left;
-  line-height: 50px;
-}
-header > ul li:nth-child(1) {
-  text-align: center;
-}
-header > ul li:nth-child(1):hover {
-  cursor: pointer;
-}
-header > ul li:nth-child(2) input {
-  border-radius: 5px;
-  height: 20px;
-  padding: 0 10px;
-  outline-width: 0;
-  font-family: GeoSans;
-  font-size: 11px;
-  width: 150px;
-}
-
-/*
-nav
-*/
-#genre-container {
-  position: absolute;
-  width: 100%;
-  display: block;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-#genre-container ul li h2 {
-  margin: 10px;
-  font-size: 20px;
-  text-align: center;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
-#genre > ul {
-  margin: 10px auto;
-}
-#genre > ul > li:hover {
-  cursor: pointer;
-}
-
-#track-picker {
-  width: 100%;
-  height: 220px;
-  position: absolute;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.6);
-  display: none;
-}
-#track-picker p {
-  display: block;
-  width: 120px;
-  margin: 15px auto 0;
-  text-align: center;
-  text-decoration: underline;
-  cursor: pointer;
-}
-#track-picker svg {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 90px;
-  z-index: 100;
-}
-#track-picker svg.close-btn {
-  top: 10px;
-  right: 10px;
-}
-#track-picker svg:hover {
-  cursor: pointer;
-}
-#track-picker svg#left-arrow {
-  left: 10px;
-}
-#track-picker svg#right-arrow {
-  right: 10px;
-}
-#track-picker ul {
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-}
-#track-picker ul li {
-  display: block;
-  width: 150px;
-  height: 150px;
-  margin: 20px 20px;
-  background-color: #959595;
-  float: left;
-}
-#track-picker ul li figure {
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
-  transition: -webkit-filter 1s;
-  cursor: pointer;
-  position: relative;
-}
-#track-picker ul li figure:hover {
-  -webkit-filter: grayscale(0);
-  transition: -webkit-filter 1s;
-}
-#track-picker ul li figure img {
-  width: 150px;
-  height: 150px;
-  display: block;
-}
-#track-picker ul li figure figcaption {
-  font-size: 11px;
-  color: #FFFFFF;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.3);
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  text-align: center;
-  width: 150px;
-  padding: 10px 0;
-}
-#track-picker ul li figure figcaption span {
-  display: block;
-  width: 150px;
-}
-#track-picker ul li figure figcaption span.track-duration {
-  margin-top: 15px;
-}
-#track-picker ul li figure figcaption span.artist-name {
-  display: none;
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  #genre > ul {
-    width: 160px;
-  }
-}
-@media (min-width: 480px) and (max-width: 640px) {
-  #genre > ul {
-    width: 320px;
-  }
-}
-@media (min-width: 640px) and (max-width: 800px) {
-  #genre > ul {
-    width: 480px;
-  }
-}
-@media (min-width: 800px) and (max-width: 960px) {
-  #genre > ul {
-    width: 640px;
-  }
-}
-@media (min-width: 960px) and (max-width: 1120px) {
-  #genre > ul {
-    width: 800px;
-  }
-}
-@media (min-width: 1120px) and (max-width: 1280px) {
-  #genre > ul {
-    width: 960px;
-  }
-}
-@media (min-width: 1280px) and (max-width: 1440px) {
-  #genre > ul {
-    width: 1120px;
-  }
-}
-@media (min-width: 1440px) {
-  #genre > ul {
-    width: 1300px;
-  }
-}
-#genre > ul > li {
-  line-height: 2em;
-}
-
-/*
+ 
+    /*
 jukebox
 */
-#juke-box {
-  position: fixed;
-  width: 100%;
-  height: 120px;
-  border: 1px solid #D2D2D2;
-  z-index: 100;
-  bottom: 0;
-  background-color: rgba(150, 150, 150, 0.6);
-  /*text-align: center;*/
-}
-#juke-box > ul > li {
-  list-style: none;
-  text-align: center;
-  line-height: 2em;
-  margin: 0 auto;
-  overflow-y: hidden;
-}
-#juke-box > ul > li:nth-of-type(1) {
-  font-size: 22px;
-  height: 44px;
-  width: 95%;
-}
-#juke-box > ul > li:nth-of-type(2) {
-  font-size: 18px;
-  height: 36px;
-  width: 70%;
-  line-height: 24px;
-}
+    #juke-box {
+      position: fixed;
+      width: 100%;
+      height: 120px;
+      border: 1px solid #D2D2D2;
+      z-index: 100;
+      bottom: 0;
+      background-color: rgba(150, 150, 150, 0.6);
+      /*text-align: center;*/
+    }
 
-/*
+    #juke-box>ul>li {
+      list-style: none;
+      text-align: center;
+      line-height: 2em;
+      margin: 0 auto;
+      overflow-y: hidden;
+    }
+
+    #juke-box>ul>li:nth-of-type(1) {
+      font-size: 22px;
+      height: 44px;
+      width: 95%;
+    }
+
+    #juke-box>ul>li:nth-of-type(2) {
+      font-size: 18px;
+      height: 36px;
+      width: 70%;
+      line-height: 24px;
+    }
+
+    /*
 track-bar
 */
-#track-bar-container {
-  height: 20px;
-  width: 60%;
-  position: relative;
-  left: 20%;
-  padding-top: 15px;
-  cursor: pointer;
-}
-#track-bar-container #track-bar {
-  height: 5px;
-  background-color: #000000;
-  position: relative;
-}
-#track-bar-container #track-bar > span {
-  position: absolute;
-  top: -5px;
-}
-#track-bar-container #track-bar > span:nth-of-type(1) {
-  left: calc(0% - 50px);
-}
-#track-bar-container #track-bar > span:nth-of-type(2) {
-  right: calc(0% - 50px);
-}
+    #track-bar-container {
+      height: 20px;
+      width: 60%;
+      position: relative;
+      left: 20%;
+      padding-top: 15px;
+      cursor: pointer;
+    }
 
-/*
-progress bar
-*/
-#progress-bar {
-  width: 200px;
-  background-color: #FFFFFF;
-  height: 5px;
-}
+    #track-bar-container #track-bar {
+      height: 5px;
+      background-color: #000000;
+      position: relative;
+    }
 
-#fader {
-  width: 10px;
-  height: 25px;
-  position: relative;
-  left: 200px;
-  top: -15px;
-  background-color: #ffffff;
-}
+    #track-bar-container #track-bar>span {
+      position: absolute;
+      top: -5px;
+    }
 
+    #track-bar-container #track-bar>span:nth-of-type(1) {
+      left: calc(0% - 50px);
+    }
 
+    #track-bar-container #track-bar>span:nth-of-type(2) {
+      right: calc(0% - 50px);
+    }
 
-li#genre > ul > li {
-  float: left;
-  width: 160px;
-  text-align: center;
-}
+    /*
 
+   
 
-/*
-main-visual
-*/
-#main-visual {
-  width: 50vh;
-  height: 50vh;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/164143/irememberyou-vs.jpg) center center no-repeat;
-  background-size: cover;
-  position: absolute;
-  left: 50%;
-  margin-left: -25vh;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  z-index: -1;
-}
-
-/*
+    /*
 play-btn
 */
-#play-btn {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/164143/play.png) 5px 5px no-repeat;
-  background-size: 30px 30px;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 45px;
-  left: 100px;
-  cursor: pointer;
-}
+    #play-btn {
+      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/164143/play.png) 5px 5px no-repeat;
+      background-size: 30px 30px;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 45px;
+      left: 100px;
+      cursor: pointer;
+    }
 
-/*
+    /*
 volume container
 */
-#volume-container {
-  float: right;
-  margin-top: -67px;
-  margin-right: 100px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  -webkit-transition: margin-top 1s;
-}
-#volume-container:hover {
-  margin-top: -130px;
-  height: 140px;
-  cursor: pointer;
-  -webkit-transition: margin-top 1s;
-}
-#volume-container:hover > input[type=range] {
-  display: block;
-  margin-top: 5px;
-  cursor: pointer;
-}
-#volume-container > img {
-  width: 26px;
-  height: auto;
-  left: 8px;
-  top: 5px;
-  position: relative;
-  z-index: 30;
-}
-#volume-container > input[type=range] {
-  display: none;
-  -webkit-appearance: none;
-  -webkit-transform: rotate(-90deg);
-  outline: 0;
-  position: relative;
-  top: 47px;
-  left: -32px;
-  background-color: #EBEBEB;
-  height: 8px;
-  width: 100px;
-  border-radius: 6px;
-}
-#volume-container > input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #FFFFFF;
-}
+    #volume-container {
+      float: right;
+      margin-top: -67px;
+      margin-right: 100px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      -webkit-transition: margin-top 1s;
+    }
 
-/*
+    #volume-container:hover {
+      margin-top: -130px;
+      height: 140px;
+      cursor: pointer;
+      -webkit-transition: margin-top 1s;
+    }
+
+    #volume-container:hover>input[type=range] {
+      display: block;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+
+    #volume-container>img {
+      width: 26px;
+      height: auto;
+      left: 8px;
+      top: 5px;
+      position: relative;
+      z-index: 30;
+    }
+
+    #volume-container>input[type=range] {
+      display: none;
+      -webkit-appearance: none;
+      -webkit-transform: rotate(-90deg);
+      outline: 0;
+      position: relative;
+      top: 47px;
+      left: -32px;
+      background-color: #EBEBEB;
+      height: 8px;
+      width: 100px;
+      border-radius: 6px;
+    }
+
+    #volume-container>input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #FFFFFF;
+    }
+
+    /*
 media query
 */
-@media (max-width: 1024px) {
-  #play-btn {
-    left: 50px;
-  }
+    @media (max-width: 1024px) {
+      #play-btn {
+        left: 50px;
+      }
 
-  #volume-container {
-    margin-right: 50px;
-  }
+      #volume-container {
+        margin-right: 50px;
+      }
 
-  #main-visual {
-    width: 719px;
-  }
-}
-@media (max-width: 719px) {
-  #main-visual {
-    width: 100%;
-    height: 300px;
-  }
-}
-@media (max-width: 700px) {
-  #play-btn {
-    left: 20px;
-  }
-
-  #volume-container {
-    margin-right: 20px;
-  }
-}
-  #right{
-    float: right;
-  
-  }
-
-</style>
-</head>
-  <body>
-  
-<div class="navbar">
-  <a href="index.html">Home</a>
-  <div class="dropdown">
-  <button class="dropbtn" onclick="myFunction()">Genre
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content" id="myDropdown">
-    <a href="#">Category 1</a>
-    <a href="#">Category 2</a>
-    <a href="#">Category 3</a>
- <audio preload="none" controls=""><source src="https://mp3cdna.tubidy.io/get.php/1/1NyMSWqIJDQ.mp3?h=SKN5eSdOyD5zckbAlTNCDg&amp;s=1561197534&amp;n=Danielle-Bregoli-is-BHAD-BHABIE-Hi-Bich-Whachu-Know-Official-Music-Video&amp;dom=Tubidy.io" type="audio/mpeg">hi fish by Levert Bregolli</audio>
-  </div>
-  </div>
-     <div id="right" >
-     <a href="games.html">iGames</a>
-    <a href="books.html" >iBooks</a>
-     <a href="icast.html">iCast</a>
-  </div>
-</div>
-    
-    
-    <canvas></canvas>
-
-<section id="juke-box">
-      <div id="play-btn"></div>
-      <ul>
-        <li>Track Title</li>
-        <li>Artist Name</li>
-      </ul>
-      <div id="track-bar-container">
-        <div id="track-bar">
-          <div id="progress-bar"></div>
-          <div id="fader"></div>
-          <span id="playback-time">0:00</span>
-          <span id="song-duration">4:00</span>
-        </div>
-      </div>
-      <div id="volume-container">
-        <img alt="play" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/164143/volume_loud.png">
-        <input type="range" min="0" max="100" value="100">
-      </div>
-    </section>
-
-<script>
-
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-  var myDropdown = document.getElementById("myDropdown");
-    if (myDropdown.classList.contains('show')) {
-      myDropdown.classList.remove('show');
+      #main-visual {
+        width: 719px;
+      }
     }
+
+    @media (max-width: 719px) {
+      #main-visual {
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      #play-btn {
+        left: 20px;
+      }
+
+      #volume-container {
+        margin-right: 20px;
+      }
+    }
+
+    #right {
+      float: right;
+
+    }
+
+/*    background clock L Co*/
+    
+    .clock {
+  width: 256px;
+  height: 256px;
+  border: 5px solid white;
+  border-radius: 50%;
+  position: absolute;
+  left: 49%;
+  top: 55%;
+  margin: -128px 0 0 -128px;
+  box-shadow:0 0 55px rgb(0, 150, 255) inset
+}
+
+.clock:before,
+.clock:after {
+  content: "";
+  position: absolute;
+  height: 128px;
+  width: 8px;
+  background: rgba(120, 250, 255, 0.74);
+  border-radius: 4px;
+  left: 50%;
+  bottom: 128px;
+  margin: 0 0 0 -4px;
+  transform-origin: bottom;
+  animation-name: Clock;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+    box-shadow:0 16px 0px rgba(245, 0, 255, 0.75)
+}
+
+.clock:before {
+  animation-duration: 500s;
+  height:96px;
+}
+.clock:after {
+  animation-duration: 60s;
+  height:100px;
+}
+@keyframes Clock {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
   }
 }
-var canvas = document.querySelector("canvas");
+    
+    
+  </style>
+</head>
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+<body>
 
-var context = canvas.getContext("2d");
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="myFunction()">Genre
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content" id="myDropdown">
+        <a href="#">Category 1</a>
+        <a href="#">Category 2</a>
+        <a href="#">Category 3</a>
+        <audio preload="none" controls="">
+          <source src="https://mp3cdna.tubidy.io/get.php/1/1NyMSWqIJDQ.mp3?h=SKN5eSdOyD5zckbAlTNCDg&amp;s=1561197534&amp;n=Danielle-Bregoli-is-BHAD-BHABIE-Hi-Bich-Whachu-Know-Official-Music-Video&amp;dom=Tubidy.io" type="audio/mpeg">hi fish by Levert Bregolli</audio>
+      </div>
+    </div>
+    <div id="right">
+      <a href="games.html">iGames</a>
+      <a href="books.html">iBooks</a>
+      <a href="icast.html">iCast</a>
+    </div>
+  </div>
 
-addEventListener("resize", () => {
+<div class="clock"></div>
+  
+  <canvas></canvas>
+
+  <section id="juke-box">
+    <div id="play-btn"></div>
+    <ul>
+      <li>Track Title</li>
+      <li>Artist Name</li>
+    </ul>
+    <div id="track-bar-container">
+      <div id="track-bar">
+        <div id="progress-bar"></div>
+        <div id="fader"></div>
+        <span id="playback-time">0:00</span>
+        <span id="song-duration">4:00</span>
+      </div>
+    </div>
+    <div id="volume-container">
+      <img alt="play" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/164143/volume_loud.png">
+      <input type="range" min="0" max="100" value="100">
+    </div>
+  </section>
+
+  <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+    var canvas = document.querySelector("canvas");
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-});
 
-var time = 6.0;
-function mainLoop() {
-    requestAnimationFrame(mainLoop);
-    time += 0.001;
-    
-    //--->
-    context.clearRect(0,0,canvas.width,canvas.height);
-    context.save();
-    
-    context.translate(canvas.width / 2, canvas.height / 2);
-    
-    for(var i = 0; i < 360; i++) {
+    var context = canvas.getContext("2d");
+
+    addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
+    var time = 6.0;
+
+    function mainLoop() {
+      requestAnimationFrame(mainLoop);
+      time += 0.001;
+
+      //--->
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.save();
+
+      context.translate(canvas.width / 2, canvas.height / 2);
+
+      for (var i = 0; i < 360; i++) {
         context.beginPath();
-        
+
         context.strokeStyle = `hsl(${i * 4}deg, 100%, 50%)`;
-        
+
         var angle_1 = ((90 + i) + 180 * Math.sin(time)) * (Math.PI / 180);
         var angle_2 = ((180 + i) + 180 * Math.sin(time)) * (Math.PI / 180);
         var angle_3 = ((270 + i) + 180 * Math.sin(time)) * (Math.PI / 180);
-        
+
         context.moveTo(-Math.cos(angle_1) * (canvas.width / 2 * Math.sin(time)), -Math.sin(angle_1) * (canvas.width / 2 * Math.sin(time)));
-        
+
         context.lineTo(Math.cos(angle_2) * canvas.width / (7.5 * Math.cos(time) + 2.5 * Math.sin(time)), Math.sin(angle_2) * canvas.width / (7.5 * Math.cos(time) + 2.5 * Math.sin(time)));
-        
+
         context.lineTo(Math.cos(angle_3) * canvas.width / 1, Math.sin(angle_3) * canvas.width / 1);
-        
+
         context.closePath();
         context.stroke();
-    }    
-    
-    context.restore();
-    //<---
-}
+      }
 
-requestAnimationFrame(mainLoop);
+      context.restore();
+      //<---
+    }
 
-</script>
+    requestAnimationFrame(mainLoop);
+
+  </script>
 </body>
+
 </html>
