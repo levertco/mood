@@ -35,6 +35,7 @@ This requires users to select the mood they would like to feel or the mood they 
 -   Click Submit.
 -   Wait for the response from the web application to give you a download link or a suggestion of what best fits your mood.
 -   If there is a download link that impresses you, be sure to click download.
+
 ## Technologies Used
 
 -   HTML
