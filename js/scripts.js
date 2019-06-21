@@ -62,17 +62,3 @@ function generate() {
    $(".lyrics").html(html);
    align();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -18,11 +18,11 @@
       body {
         margin: 0 !important;
         padding: 0 !important;
-      background-image: url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=349&q=80")
-      ;     }
+        background-image: url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=349&q=80");
+      }
 
       .col-8 {
-        background-color: rgba(0,0,0,0.8);
+        background-color: rgba(0, 0, 0, 0.8);
         width: 100%;
       }
 
@@ -69,11 +69,21 @@
         font-size: 17px;
       }
 
-      .title button:hover {
-        background-color: rgba(0,0,0,0.8);
+      .title button:focus {
+        background: rgba(0, 0, 0, 0.8);
       }
-      .nav-link{
-background-color:rgba(0,0,0,0.8)!important;
+
+      .title button:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .nav-link {
+        background-color: rgba(0, 0, 0, 0.8) !important;
+      }
+
+      h5 {
+        color: #fff;
+        text-align: center;
       }
     </style>
 
@@ -105,90 +115,106 @@ background-color:rgba(0,0,0,0.8)!important;
     <br><br>
 
     <div class="row">
-        <div class="col-4">
-          <div class="title">
-            <h4>Mood: select genre</h4>
-            <button class="links" onclick="openGame(event, 'home')" id="defaultOpen">Home</button><hr>
-            <hr>
-            <button class="links" onclick="openGame(event, 'action')">Action games</button>
-            <hr>
-            <button class="links" onclick="openGame(event, 'sport')">Sport games</button>
-            <hr>
-            <button class="links" onclick="openGame(event, 'brg')">Battle Royale games</button>
-            <hr>
-            <button class="links" onclick="openGame(event, 'rpg')">Role-playing games</button>
-            <hr>
-            <button class="links" onclick="openGame(event, 'adventure')">Adventure games</button>
-            <hr>
-            <button class="links" onclick="openGame(event, 'racing')">Racing games</button>
-            <hr>
-            <button class="links" onclick="openGame(event, 'fighting')">Fighting games</button>
-            <hr>
-            <button class="links" onclick="openGame(event, 'rts')">Real-time strategy games</button>
-            <hr>
-            <button class="links" onclick="openGame(event, 'simulator')">Simulator</button>
-            <hr>
-          </div>
+      <div class="col-4">
+        <div class="title">
+          <h4 style="margin-left:50px;">Mood</h4>
+          <button class="links" onclick="openGame(event, 'home')" id="defaultOpen">Home</button>
+          <hr>
+          <hr>
+          <button class="links" onclick="openGame(event, 'action')">Frustrated</button>
+          <hr>
+          <button class="links" onclick="openGame(event, 'sport')">Energetic</button>
+          <hr>
+          <button class="links" onclick="openGame(event, 'brg')">Dreamy</button>
+          <hr>
+          <button class="links" onclick="openGame(event, 'rpg')">Excited</button>
+          <hr>
+          <button class="links" onclick="openGame(event, 'adventure')">Mysterious</button>
+          <hr>
+          <button class="links" onclick="openGame(event, 'racing')">Gloomy</button>
+          <hr>
+          <button class="links" onclick="openGame(event, 'fighting')">Chaotic</button>
+          <hr>
+          <button class="links" onclick="openGame(event, 'rts')">Annoyed</button>
+          <hr>
+          <button class="links" onclick="openGame(event, 'simulator')">Idyllic</button>
+          <hr>
+        </div>
       </div>
 
       <div class="col-8">
         <div class="content" id="home">
           <img src="images/game1.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"><br>
           <h1>PlayerLair</h1><br>
-          <p>This section brings you links to play or download video games and reviews of the most exciting releases. We cover everything from PlayStation and Xbox blockbusters, to quirky Nintendo games, to the cool indie gems on PC and Android that
+          <p>This section brings you links to play or download video games and reviews of the most exciting releases. We cover a lot, from PlayStation and Xbox blockbusters, to quirky Nintendo games, to the cool indie gems on PC and Android that
             you might otherwise miss. We have genres listed down for you, to help you choose a game that your mood needs</p><br>
           <footer class="page-footer font-small cyan darken-3">
             <div class="footer" style="text-align:center">
               <div class="footer-copyright text-center py-3">© 2019 Copyright: Mood-sync</div>
               <div class="footer-copyright text-center py-3">Follow us on:</div>
 
-               <i class="fab fa-twitter"></i>
-              <span class="fa-stack fa-lg"> <i class="fab fa-instagram"></i></span>
-              <span class="fa-stack fa-lg"> <i class="fab fa-github"></i></span>
-              <span class="fa-stack fa-lg"> <i class="fab fa-linkedin-in"></i></i></span>
+              <i class="fab fa-twitter"> <a href="https://twitter.com/BlizzardCS?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"></a> </i>
+              <span class="fa-stack fa-lg"> <i class="fab fa-instagram"> <a href="https://www.instagram.com/blizzard/"></a> </i></span>
+              <span class="fa-stack fa-lg"> <i class="fab fa-github"><a href="https://github.com/Pixel-0/mood"></a></i></span>
+
             </div>
           </footer>
         </div>
         <div class="content" id="action">
           <a href="https://www.gamebra.com/gta-5-online.html"><img src="images/gta.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
           <br>
+          <h5>Action Games</h5><br>
           <p> If you want a game that puts emphasis on challenging the player’s: in this case,you; reflexes, reaction time, and hand-eye coordination, then you're on the right page. </p>
         </div>
         <div class="content" id="sport">
           <a href="https://nba.2k.com/playgrounds/"><img src="images/nba.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
           <br>
-          <p>Just like the real-world sports, sports games simulate the traditional physical sports wherein the opposing team is controlled by artificial intelligence (AI) or other real-life people. If you want to play actual sports without going outside, this is you.</p>
+          <h5>Sports Games</h5><br>
+          <p>Just like the real-world sports, sports games simulate the traditional physical sports wherein the opposing team is controlled by artificial intelligence (AI) or other real-life people. If you want to play actual sports without going
+            outside, this is you.</p>
         </div>
         <div class="content" id="brg">
           <a href="https://lite.pubg.com/download/"><img src="images/pubg.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
           <br>
-          <p>Part of the fun of a battle royale is that there are multiple ways to win. Not confident in your close combat skills? Find a sniper and pick people off from a distance. Prefer to avoid conflict? Go the stealth route and see how far you can get without engaging in any fights.</p>
+          <h5>Battle Royale games</h5><br>
+          <p>Part of the fun of a battle royale is that there are multiple ways to win. Not confident in your close combat skills? Find a sniper and pick people off from a distance. Prefer to avoid conflict? Go the stealth route and see how far you
+            can get without engaging in any fights.</p>
         </div>
         <div class="content" id="rpg">
-          <img src="images/witcher.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300">
+          <a href="https://worldofwarcraft.com/en-us/start"><img src="images/wow.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
           <br>
+          <h5>Role-Playing Games</h5><br>
           <p> It’s a genre of video and online games where the player controls a fictional character that takes on a quest in an imaginary world. Play RPGs if you want to exist virtually and do stuff you couldn't in real life!</p>
         </div>
         <div class="content" id="adventure">
           <a href="http://www.free80sarcade.com/mspacman.php"><img src="images/dungeon.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
           <br>
+          <h5>Adventure Games</h5><br>
           <p>This is for adrenaline junkies and curious minds. In video-game culture, these games are a video games in which the player assumes the role of a protagonist in an interactive story driven by exploration and puzzle-solving.</p>
         </div>
         <div class="content" id="racing">
           <a href="https://www.agame.com/games/racing"><img src="images/mario.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
-
+          <br>
+          <h5>Racing Games</h5><br>
+          <p>Test your driving skills in our online and free Race games. Race against computer opponents or time and don't crash. Check if you're the best online driver on the track.</p>
         </div>
         <div class="content" id="fighting">
           <a href="http://www.plonga.com/action/Street-Fighting/Mortal-Kombat"><img src="images/mk.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
-
+          <br>
+          <h5>Fighting Games</h5><br>
+          <p>You want to control a fictional character that fights their oponents to death?, Play fighting games like Mortal Kombat X and get yourself a killer game! (Pun intended). </p>
         </div>
         <div class="content" id="rts">
           <a href="https://play.euw.leagueoflegends.com/en_GB"><img src="images/lol.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
-
+          <br>
+          <h5>Real-time strategy games</h5><br>
+          <p>Real-time strategy (RTS) is a sub-genre of strategy video games in which the game does not progress incrementally in turns. In an RTS, the participants position and maneuver units and structures under their control to secure areas of the
+            map and/or destroy their opponents' assets. Great way to get away with destroying stuff.</p>
         </div>
         <div class="content" id="simulator">
           <a href="https://emulatoronline.com/snes-games/simcity-classic/"><img src="images/simcity.jpg" class="mx-auto d-block" alt="Cinque Terre" width="450" height="300"></a>
           <br>
+          <h5>Simulator</h5><br>
           <p>Welcome to the simulated world! A good example is SimCity, This game simulates the lives of characters along with the construction and management of the city. You're even given an option to manage an economic system</p>
         </div>
 
@@ -202,22 +228,22 @@ background-color:rgba(0,0,0,0.8)!important;
   <!-- oooh, we did great, I think -->
 
   <script>
-function openGame(evt, gameName) {
-  var i, content, links;
-  content = document.getElementsByClassName("content");
-  for (i = 0; i < content.length; i++) {
-    content[i].style.display = "none";
-  }
-  links = document.getElementsByClassName("links");
-  for (i = 0; i < links.length; i++) {
-    links[i].className = links[i].className.replace(" active", "");
-  }
-  document.getElementById(gameName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+    function openGame(evt, gameName) {
+      var i, content, links;
+      content = document.getElementsByClassName("content");
+      for (i = 0; i < content.length; i++) {
+        content[i].style.display = "none";
+      }
+      links = document.getElementsByClassName("links");
+      for (i = 0; i < links.length; i++) {
+        links[i].className = links[i].className.replace(" active", "");
+      }
+      document.getElementById(gameName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
 
-document.getElementById("defaultOpen").click();
-</script>
+    document.getElementById("defaultOpen").click();
+  </script>
 
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/popper.min.js"></script>

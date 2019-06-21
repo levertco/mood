@@ -12,7 +12,7 @@
   <title>iMusic</title>
   <style>
     .navbar {
-      overflow: hidden;
+     
       background-color: rgba(80, 0, 190, 0.31);
       font-family: Arial, Helvetica, sans-serif;
     }
@@ -170,7 +170,7 @@ summary,time, video {
       outline: 0;
       font-size: 100%;
       vertical-align: baseline;
-      background: transparent;
+      
       margin: 0;
       padding: 0;
     }
@@ -183,7 +183,7 @@ summary,time, video {
       font-family: GeoSans;
       src: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/164143/GeosansLight.ttf);
     }
- 
+
     /*
 jukebox
 */
@@ -191,10 +191,8 @@ jukebox
       position: fixed;
       width: 100%;
       height: 120px;
-      border: 1px solid #D2D2D2;
       z-index: 100;
       bottom: 0;
-      background-color: rgba(150, 150, 150, 0.6);
       /*text-align: center;*/
     }
 
@@ -252,23 +250,10 @@ track-bar
 
     /*
 
-   
+
 
     /*
-play-btn
-*/
-    #play-btn {
-      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/164143/play.png) 5px 5px no-repeat;
-      background-size: 30px 30px;
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      top: 45px;
-      left: 100px;
-      cursor: pointer;
-    }
 
-    /*
 volume container
 */
     #volume-container {
@@ -365,7 +350,7 @@ media query
     }
 
 /*    background clock L Co*/
-    
+
     .clock {
   width: 256px;
   height: 256px;
@@ -412,8 +397,8 @@ media query
     transform: rotate(360deg)
   }
 }
-    
-    
+
+
   </style>
 </head>
 
@@ -438,12 +423,7 @@ media query
         <a href="#">Depressed</a>
          <audio preload="none" controls="">
           <source src="https://mp3cdna.tubidy.io/get.php/1/1NyMSWqIJDQ.mp3?h=SKN5eSdOyD5zckbAlTNCDg&amp;s=1561197534&amp;n=Danielle-Bregoli-is-BHAD-BHABIE-Hi-Bich-Whachu-Know-Official-Music-Video&amp;dom=Tubidy.io" type="audio/mpeg">hi fish Levert Bregolli</audio>
-        <a href="#">Happy</a>
-         <audio preload="none" controls="">
-          <source src="https://mp3cdna.tubidy.io/get.php/1/1NyMSWqIJDQ.mp3?h=SKN5eSdOyD5zckbAlTNCDg&amp;s=1561197534&amp;n=Danielle-Bregoli-is-BHAD-BHABIE-Hi-Bich-Whachu-Know-Official-Music-Video&amp;dom=Tubidy.io" type="audio/mpeg">hi fish Levert Bregolli</audio>
-        <a href="#">Happy</a>
-         <audio preload="none" controls="">
-          <source src="https://mp3cdna.tubidy.io/get.php/1/1NyMSWqIJDQ.mp3?h=SKN5eSdOyD5zckbAlTNCDg&amp;s=1561197534&amp;n=Danielle-Bregoli-is-BHAD-BHABIE-Hi-Bich-Whachu-Know-Official-Music-Video&amp;dom=Tubidy.io" type="audio/mpeg">hi fish Levert Bregolli</audio>
+        
       </div>
     </div>
     <div id="right">
@@ -454,12 +434,22 @@ media query
   </div>
 
 <div class="clock"></div>
-  
  
-  
-  
-  
-  
+   <span> 
+ <a href="http://www.spotify.com" target="_blank">
+  <img src="./images/classicalhd.jpg" style=" float: left;width: 250px;height: 150px;vertical-align: middle; " />
+ </a>
+      <span> 
+ <a href="http://www.spotify.com" target="_blank">
+  <img src="./images/rnb.jpg" style=" float: left;width: 250px;height: 150px;vertical-align: middle; " />
+ </a>
+</span>
+      <span> 
+ <a href="http://www.spotify.com" target="_blank">
+  <img src="./images/game.jpg" style=" float: left;width: 250px;height: 150px;vertical-align: middle; " />
+ </a>
+</span>
+</span>
   <body>
 
   <div class="content">
@@ -470,8 +460,22 @@ media query
    <div class="left"></div>
    <div class="right">
       <div class="top">
-         <a class="song" href="https://open.spotify.com/track/52LlzTfdulBMiwH4BZy5Sq?si=1c1rwqNYSf6ZaaRbzlstLQ">Random stuff HP Levert Envy X2</a>
+         <a class="song" href="https://open.spotify.com/track/52LlzTfdulBMiwH4BZy5Sq?si=1c1rwqNYSf6ZaaRbzlstLQ">Playlist Spectre L Co</a>
          <a class="artist" href="https://open.spotify.com/artist/6OqhFYFJDnBBHas02HopPT?si=vQaSwY1DRkyhj-eoKZlMrw">Levert Co (hp envy x2)</a>
+
+  <canvas></canvas>
+
+  <section id="juke-box">
+   
+    <ul>
+      <li>Track Title</li>
+    </ul>
+    <div id="track-bar-container">
+      <div id="track-bar">
+        <div id="progress-bar"></div>
+        <div id="fader"></div>
+       
+
       </div>
       <div class="bottom">
          <video controls="" _autoplay="" name="media"><source src="https://i.koya.io/Kero%20Kero%20Bonito%20-%20Let's%20Go%20To%20The%20Forest.mp3" type="audio/mpeg"></video>
@@ -544,7 +548,6 @@ media query
       requestAnimationFrame(mainLoop);
       time += 0.001;
 
-      //--->
       context.clearRect(0, 0, canvas.width, canvas.height);
       context.save();
 
@@ -570,7 +573,6 @@ media query
       }
 
       context.restore();
-      //<---
     }
 
     requestAnimationFrame(mainLoop);
