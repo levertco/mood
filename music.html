@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="shorcut icon" href="images/Emoji_emoticon_emoticons_expression_laugh_mood-512.png" type="image/png">
+  
+  
+
+      <link rel="stylesheet" href="./css/styles.css">
   <title>iMusic</title>
   <style>
     .navbar {
-      overflow: hidden;
+     
       background-color: rgba(80, 0, 190, 0.31);
       font-family: Arial, Helvetica, sans-serif;
     }
@@ -166,7 +170,7 @@ summary,time, video {
       outline: 0;
       font-size: 100%;
       vertical-align: baseline;
-      background: transparent;
+      
       margin: 0;
       padding: 0;
     }
@@ -175,15 +179,10 @@ summary,time, video {
       line-height: 1;
     }
 
-
-
     @font-face {
       font-family: GeoSans;
       src: url(//s3-us-west-2.amazonaws.com/s.cdpn.io/164143/GeosansLight.ttf);
     }
-
-
-
 
     /*
 jukebox
@@ -192,10 +191,8 @@ jukebox
       position: fixed;
       width: 100%;
       height: 120px;
-      border: 1px solid #D2D2D2;
       z-index: 100;
       bottom: 0;
-      background-color: rgba(150, 150, 150, 0.6);
       /*text-align: center;*/
     }
 
@@ -256,20 +253,7 @@ track-bar
 
 
     /*
-play-btn
-*/
-    #play-btn {
-      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/164143/play.png) 5px 5px no-repeat;
-      background-size: 30px 30px;
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      top: 45px;
-      left: 100px;
-      cursor: pointer;
-    }
 
-    /*
 volume container
 */
     #volume-container {
@@ -419,51 +403,129 @@ media query
 </head>
 
 <body>
-
   <div class="navbar">
     <a href="index.html">Home</a>
     <div class="dropdown">
-      <button class="dropbtn" onclick="myFunction()">Genre
+      <button class="dropbtn" onclick="myFunction()">Mood
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content" id="myDropdown">
-        <a href="#">Category 1</a>
-        <a href="#">Category 2</a>
-        <a href="#">Category 3</a>
+        
+        <a href="#">Happy</a>
+         <audio preload="none" controls="">
+            <source src="/Music/happy.mp3" type="audio/mpeg">bury Levert co</audio>
+      
+        <a href="#">Dull</a>
         <audio preload="none" controls="">
-          <source src="https://mp3cdna.tubidy.io/get.php/1/1NyMSWqIJDQ.mp3?h=SKN5eSdOyD5zckbAlTNCDg&amp;s=1561197534&amp;n=Danielle-Bregoli-is-BHAD-BHABIE-Hi-Bich-Whachu-Know-Official-Music-Video&amp;dom=Tubidy.io" type="audio/mpeg">hi fish by Levert Bregolli</audio>
+          <source src="/Music/bury.mp3" type="audio/mpeg">bury Levert co</audio>
+      
+        <a href="#">Depressed</a>
+         <audio preload="none" controls="">
+          <source src="/Music/sad.mp3" type="audio/mpeg">bury Levert co</audio>
+        
       </div>
     </div>
     <div id="right">
-      <a href="games.html">iGames</a>
-      <a href="books.html">iBooks</a>
+	<a href="movies.html">Movies</a>
+      <a href="games.html">Games</a>
+      <a href="books.html">Books</a>
       <a href="icast.html">iCast</a>
     </div>
   </div>
 
 <div class="clock"></div>
+ 
+   <span> 
+ <a href="https://www.youtube.com/watch?v=h56M8Ti6Ejw" target="_blank">
+  <img src="./images/classicalhd.jpg" style=" float: left;width: 250px;height: 150px;vertical-align: middle; " />
+ </a>
+      <span> 
+ <a href="https://www.youtube.com/watch?v=cnn-z4U_S50" target="_blank">
+  <img src="./images/rnb.jpg" style=" float: left;width: 250px;height: 150px;vertical-align: middle; " />
+ </a>
+</span>
+      <span> 
+ <a href="https://www.youtube.com/watch?v=3gt-rxxs-RQ" target="_blank">
+  <img src="./images/future.jpg" style=" float: left;width: 250px;height: 150px;vertical-align: middle; " />
+ </a>
+</span>
+      <span> 
+ <a href="https://www.youtube.com/watch?v=Zi_XLOBDo_Y" target="_blank">
+  <img src="./images/mj.jpg" style=" float: left;width: 250px;height: 150px;vertical-align: middle; " />
+ </a>
+</span>
+      <span> 
+ <a href="https://www.youtube.com/watch?v=0L0FbItE-vs" target="_blank">
+  <img src="./images/randomstuff.jpg" style=" float: left;width: 250px;height: 150px;vertical-align: middle; " />
+ </a>
+</span>
+</span>
+  <body>
+
+  <div class="content">
+   <div class="lyrics"></div>
+</div>
+
+<div class="player">
+   <div class="left"></div>
+   <div class="right">
+      <div class="top">
+         <a class="song" href="https://open.spotify.com/track/52LlzTfdulBMiwH4BZy5Sq?si=1c1rwqNYSf6ZaaRbzlstLQ">.</a>
+         <a class="artist" href="https://open.spotify.com/artist/6OqhFYFJDnBBHas02HopPT?si=vQaSwY1DRkyhj-eoKZlMrw">.</a>
 
   <canvas></canvas>
-
+<embed src="/Music/moodsync.mp3" autostart="true">
   <section id="juke-box">
-    <div id="play-btn"></div>
+   
     <ul>
-      <li>Track Title</li>
-      <li>Artist Name</li>
+      <li>.</li>
     </ul>
     <div id="track-bar-container">
       <div id="track-bar">
         <div id="progress-bar"></div>
         <div id="fader"></div>
-        <span id="playback-time">0:00</span>
-        <span id="song-duration">4:00</span>
+       
+
       </div>
-    </div>
-    <div id="volume-container">
-      <img alt="play" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/164143/volume_loud.png">
-      <input type="range" min="0" max="100" value="100">
-    </div>
-  </section>
+      <div class="bottom">
+         <video controls="" _autoplay="" name="media"><source src="https://i.koya.io/Kero%20Kero%20Bonito%20-%20Let's%20Go%20To%20The%20Forest.mp3" type="audio/mpeg"></video>
+      </div>
+   </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://codepen.io/z-/pen/b80a82399ce296a5ae898314d25aab44'></script>
+<script src='https://codepen.io/z-/pen/2c7364f84f43c21e994e4fb7b08d6ec8'></script>
+<script src='https://codepen.io/z-/pen/3f1e5b5c78c8e29dac7cd9b368c9588b'></script>
+<script src='https://codepen.io/z-/pen/7ea46ddd3f67af5c54c6a85b62e3bf6f'></script>
+<script src='https://codepen.io/z-/pen/f04c48e49111ecc45c269f7982f4d316'></script>
+<script src='https://codepen.io/z-/pen/3fd7d80820b071e01bf9eb0c0c6e1fe3'></script>
+<script src='https://codepen.io/z-/pen/603dce1db8e57ac8da6c8b1cc8c12b98'></script>
+<script src='https://codepen.io/z-/pen/a0fabb58a6dc479728ccc8e33352c007'></script>
+<script src='https://codepen.io/z-/pen/3957cdad8abc3da137905da0c1b89ee7'></script>
+<script src='https://codepen.io/z-/pen/63c6bbb02bfa1dfbeba4d30737a492c6'></script>
+<script src='https://codepen.io/z-/pen/74bbe3852bf75d66a7a0c9534e0b6618'></script>
+<script src='https://codepen.io/z-/pen/4faa8297d50d678f6292098e96079f6e'></script>
+<script src='https://codepen.io/z-/pen/0a1bedbb8ca05b9afd329264fca7b921'></script>
+<script src='https://codepen.io/z-/pen/f883f8c6d04e206547ab007f5b93bc9c'></script>
+<script src='https://codepen.io/z-/pen/981373951584da45d4d6366094974b6d'></script>
+<script src='https://codepen.io/z-/pen/a3625ac432ead8e20af8f059881dca35'></script>
+<script src='https://codepen.io/z-/pen/a3e71dad89f8e720aa76a4cea7d88800'></script>
+<script src='https://codepen.io/z-/pen/9e994e381e79fecd11ec069592abc381'></script>
+
+  
+
+    <script  src="./js/scripts.js"></script>
+
+
+
+
+</body>
+  
+  
+  
+  
+  
+ 
 
   <script>
     function myFunction() {
@@ -496,7 +558,6 @@ media query
       requestAnimationFrame(mainLoop);
       time += 0.001;
 
-      //--->
       context.clearRect(0, 0, canvas.width, canvas.height);
       context.save();
 
@@ -522,7 +583,6 @@ media query
       }
 
       context.restore();
-      //<---
     }
 
     requestAnimationFrame(mainLoop);
