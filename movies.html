@@ -5,28 +5,10 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="shorcut icon" href="images/Emoji_emoticon_emoticons_expression_laugh_mood-512.png" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="a0nonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/scripts.js"></script>
-   <ul class="nav justify-content-end bg-blue color-text-secondary mr-6">
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="index.html" >Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="music.html" >iMusic</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="icast.html">iCasts</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="games.html"> iGames</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="books.html">iBooks</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link  bg-info text-white" href="#contact">Contact Us</a>
-    </li>
-  </ul>
+
 </head>
 <style>
   body{
@@ -72,82 +54,112 @@
  .nav-link{
     background-color: rgba(0,0,0,0.8)!important;
 }
+
+.jumbotron {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.footer {
+  color: white;
+}
  </style>
 <body>
-   <div class="container-fluid">
-      <h1><strong style="color: black">MOVIES </strong></h1>
-      <p style="color: black">WELCOME TO THE MOVIES SECTION.</p>
-    <div class="row">
-      <img src="images/Movie21.jpg" class="movie21">
-      <img src="images/Movie17.png" class="movie17">
-    </div>
-    <div class="row">
-      <img src="images/Movie16.jpg" class="movie16">
-      <img  src="images/Movie15.jpg" class="movie15">
-    </div>
-    <div class="row">
-      <img  src="images/Movie14.jpg" class="movie14">
-      <img  src="images/Movie13.jpg" class="movie13">
-    </div>
-   <h2><strong style="color: black">KINDLY FILL IN THE FORM BELOW TO KNOW WHICH KINDS OF MOVIES YOU PREFER:</strong></h2>
-  </div>
-  <div id="blanks">
-      <form id="form">
-         <div class="form-group">
-            <label for="firstname"style="color: black">FIRST NAME: </label> 
-            <input id="firstname" class="form-control" type="text">
-         </div>
-         <div class="form-group">
-            <label for="secondname"style="color: black">SECOND NAME:</label>
-            <input id="secondname" class="form-control" type="text">
-         </div>
-         <div class="form-group">
-            <label for="gender"style="color: black">GENDER:</label>
-            <select class="form-control" id="gender">
-                <option>Male</option>
-                <option>Female</option>
-              </select>
-         </div>
-         <div class="form-group">
-            <label for="genre"style="color: black">WHICH GENRE DO YOU LIKE:</label>
-            <select class="form-control" id="genre">
-                <option>Action</option>
-                <option>Sci-FI</option>
-                <option>Comedy</option>
-                <option>Drama</option>
-              </select>
-         </div>
-         <div class="form-group">
-            <label for="mood"style="color: black">MOOD: select [Happy,Sad,Thrilled,Sombre,Peaceful,Romance]</label>
-          <input type="text" class="form-control" id="mood">
-         </div>
-         <div class="form-group">
-            <label for="email"style="color: black">EMAIL ADDRESS:</label>
-            <input id="email" class="form-control" type="text">
-         </div>
-         <input type="button" id="submit" class="btn btn-primary" value="SUGGESTIONS" style="color: aliceblue!important">
-      </form>
-      <h3style="color: black">TO WATCH ONLINE THE SUGGESTED MOVIES FOLLOW THE LINKS BELOW:</h3>
-      <p><a href="https://www.netflix.com/ke/login"style="color: black">NETFLIX LINK.</a></p>
-      <p><a href="https://123movies.domains/123movies"style="color: black">123 MOVIES.</a></p>
-      <h4 style="color: black">TO DOWNLOAD THE SUGGESTED MOVIES FOLLOW THIS LINK:</h4>
-      <p><a href="https://oceanofmovies.org/"style="color: black">OCEAN OF MOVIES LINK.</a></p>   
+  <div class="jumbotron">
+    <ul class="nav justify-content-end bg-blue color-text-secondary mr-6">
+     <li class="nav-item">
+       <a class="nav-link  bg-info text-white" href="index.html" >Home</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link  bg-info text-white" href="music.html" >iMusic</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link  bg-info text-white" href="icast.html">iCasts</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link  bg-info text-white" href="games.html"> iGames</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link  bg-info text-white" href="books.html">iBooks</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link  bg-info text-white" href="#contact">Contact Us</a>
+     </li>
+   </ul>
+     <div class="container-fluid">
+        <h1><strong style="color: #fff;">MOVIES </strong></h1>
+        <p style="color: #fff;">WELCOME TO THE MOVIES SECTION.</p>
       <div class="row">
-          <img src="images/Movie19.jpg" class="movie19">
-          <img  src="images/Movie20.png" class="movie20">
-        </div>
-        <footer class="page-footer font-small cyan darken-3">
-            <div class="jumbo" style="text-align:center; color:white;">
-              <div class="footer-copyright text-center py-3">© 2019 Copyright:Mood-Sync</div>
+        <img src="images/Movie21.jpg" class="movie21">
+        <img src="images/Movie17.png" class="movie17">
+      </div>
+      <div class="row">
+        <img src="images/Movie16.jpg" class="movie16">
+        <img  src="images/Movie15.jpg" class="movie15">
+      </div>
+      <div class="row">
+        <img  src="images/Movie14.jpg" class="movie14">
+        <img  src="images/Movie13.jpg" class="movie13">
+      </div>
+     <h2><strong style="color: #fff;">KINDLY FILL IN THE FORM BELOW TO KNOW WHICH KINDS OF MOVIES YOU PREFER:</strong></h2>
+    </div>
+    <div id="blanks">
+        <form id="form">
+           <div class="form-group">
+              <label for="firstname"style="color: #fff;">FIRST NAME: </label>
+              <input id="firstname" class="form-control" type="text">
+           </div>
+           <div class="form-group">
+              <label for="secondname"style="color: #fff;">SECOND NAME:</label>
+              <input id="secondname" class="form-control" type="text">
+           </div>
+           <div class="form-group">
+              <label for="gender"style="color: #fff;">GENDER:</label>
+              <select class="form-control" id="gender">
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+           </div>
+           <div class="form-group">
+              <label for="genre"style="color: #fff;">WHICH GENRE DO YOU LIKE:</label>
+              <select class="form-control" id="genre">
+                  <option>Action</option>
+                  <option>Sci-FI</option>
+                  <option>Comedy</option>
+                  <option>Drama</option>
+                </select>
+           </div>
+           <div class="form-group">
+              <label for="mood"style="color: #fff;">MOOD: select [Happy,Sad,Thrilled,Sombre,Peaceful,Romance]</label>
+            <input type="text" class="form-control" id="mood">
+           </div>
+           <div class="form-group">
+              <label for="email"style="color: #fff;">EMAIL ADDRESS:</label>
+              <input id="email" class="form-control" type="text">
+           </div>
+           <input type="button" id="submit" class="btn btn-primary" value="SUGGESTIONS" style="color: aliceblue!important">
+        </form>
+        <h3 style="color: #fff;">TO WATCH ONLINE THE SUGGESTED MOVIES FOLLOW THE LINKS BELOW:</h3>
+        <p><a href="https://www.netflix.com/ke/login"style="color: #fff;">NETFLIX LINK.</a></p>
+        <p><a href="https://123movies.domains/123movies"style="color: #fff;">123 MOVIES.</a></p>
+        <h4 style="color: #fff;">TO DOWNLOAD THE SUGGESTED MOVIES FOLLOW THIS LINK:</h4>
+        <p><a href="https://oceanofmovies.org/"style="color: #fff;">OCEAN OF MOVIES LINK.</a></p>
+        <div class="row">
+            <img src="images/Movie19.jpg" class="movie19">
+            <img  src="images/Movie20.png" class="movie20">
+          </div>
+          <footer class="page-footer font-small cyan darken-3">
+            <div class="footer" style="text-align:center">
+              <div class="footer-copyright text-center py-3">© 2019 Copyright: Mood-sync</div>
               <div class="footer-copyright text-center py-3">Follow us on:</div>
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-square-o fa-stack-2x"></i>
-                <i class="fa fa-twitter fa-stack-1x"></i>
-              </span>
-              <span class="fa-stack fa-lg"> <i class="fa fa-instagram fa-stack-2x" aria-hidden="true"></i></span>
-              <span class="fa-stack fa-lg"> <i class="fa fa-github fa-stack-2x" aria-hidden="true"></i></span>
+
+              <i class="fab fa-twitter"> <a href="https://twitter.com/BlizzardCS?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"></a> </i>
+              <span class="fa-stack fa-lg"> <i class="fab fa-instagram"> <a href="https://www.instagram.com/blizzard/"></a> </i></span>
+              <span class="fa-stack fa-lg"> <i class="fab fa-github"><a href="https://github.com/Pixel-0/mood"></a></i></span>
+
             </div>
-            </footer>
+          </footer>
+  </div>
+
 <script>
   $(document).ready(function() {
       $("#submit").click(function(event) {
@@ -172,12 +184,12 @@
       alert("Kissing Booth, Five feet Apart, The Perfect Date, Sunshine In Heaven, What Men Want");
      }
      else{
-      alert("select correct mood");  
+      alert("select correct mood");
      }
      ("#form")[0].reset();
          });
-     }); 
-         
+     });
+
 </script>
  </body>
 </html>
