@@ -3,12 +3,10 @@
 #### version one.
 
 #### Authors
-
-**Janice Mukenyi  Muia**
-**Levert Ouma**
-**Daniel Muthui**
-**Brian Kavagi**
-**Sarah Munini**
+- **Janice Mukenyi  Muia**
+- **Daniel Muthui**
+- **Brian Kavagi**
+- **Sarah Munini**
 
 ## Description
 
